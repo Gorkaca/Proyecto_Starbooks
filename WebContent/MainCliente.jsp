@@ -34,7 +34,7 @@
 </style>
 </head>
 <body>
-<div class="container-fluid bg-2 text-center">
+<div class="container-fluid bg-1 text-center">
 <p>
 <span class="glyphicon glyphicon-search"></span> Search
 <a href="#" class="btn btn-default btn-lg"> </a>

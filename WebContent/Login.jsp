@@ -42,7 +42,7 @@
 <img src=C:\Users\S\workspace\Proyecto\WebContent\Imagenes\starbooks1.jpg class="img-responsive img-circle" style="display: inline" alt="Bird"width="350" height="350"> 		
 		</p>
 			nombre:<input type="text"name="nombre" id="nombre"> <br/> 
-			apellido:<input type="text" name="apellido" id="apellido"><br/>
+			contrasena:<input type="text" name="contraseña" id="contraseña"><br/>
 			<p>
 				<input type="submit" name="login" value="login" id="login">
 			</p>

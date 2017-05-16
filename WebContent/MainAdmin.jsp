@@ -34,19 +34,16 @@
 </style>
 </head>
 <body>
-<div class="container">
-  <button type="button" class="btn">Basic</button>
-  <button type="button" class="btn btn-default">Default</button>
-  <button type="button" class="btn btn-primary">Primary</button>
-  <button type="button" class="btn btn-success">Success</button>
-  <button type="button" class="btn btn-info">Info</button>
-  <button type="button" class="btn btn-warning">Warning</button>
-  <button type="button" class="btn btn-danger">Danger</button>
-  <button type="button" class="btn btn-link">Link</button>      
-  
-  
+<div class="container-fluid bg-1 text-center">  
+<p>
+<br>
   <img src=C:\Users\S\workspace\Proyecto\WebContent\Imagenes\administrador.jpg class="img-responsive img-circle" style="display: inline" alt="Bird"width="350" height="350"> 		
+</br>
+</p>
+  <button type="button" class="btn btn-default">Ver Libros</button>
+  <button type="button" class="btn btn-primary">Añadir Libros</button>
+  <button type="button" class="btn btn-info">Ver Pedidos</button>
+  
 </div>
-
 </body>
 </html>
