@@ -2,7 +2,6 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -35,63 +34,49 @@
 </head>
 <body>
 <div class="container-fluid bg-1 text-center"> 
-<h1>Lista de Libros</h1>
+<h1>Lista de pedidos</h1>
 <p>
 <img src=C:\Users\S\workspace\Proyecto\WebContent\Imagenes\starbooks1.jpg class="img-responsive img-circle" style="display: inline" alt="Bird"width="120" height="120"> 		
 		</p>
 <table class="table">
     <thead>
       <tr>
-        <th>Titulo</th>
-        <th>Autor</th>
-        <th>num_pag</th>
-        <th>Editorial</th>
+        <th>Nombre de Cliente</th>
+        <th>Libro</th>
       </tr>
     </thead>
-    <tbody>
+    <body>
+    <!--adibide bat non zelan pintatzen den taulan gauzak-->
       <tr>
-      <!--adibide bat non zelan pintatzen den taulan gauzak-->
         <td><%="hola" %></td>
         <td></td>
-        <td></td>
-        <td></td>
-      </tr> 
-      <!--adibide bat non zelan pintatzen den taulan gauzak-->     
+      </tr>      
+      <!--adibide bat non zelan pintatzen den taulan gauzak-->
       <tr>
          <td><%="hola" %></td>
         <td></td>
-        <td></td>
-        <td></td>
       </tr>
-      <!--adibide bat non zelan pintatzen den taulan gauzak-->   
+      <!--adibide bat non zelan pintatzen den taulan gauzak-->
       <tr>
         <td><%="hola" %></td>
         <td></td>
-        <td></td>
-        <td></td>
       </tr>
-      <!--adibide bat non zelan pintatzen den taulan gauzak-->   
+      <!--adibide bat non zelan pintatzen den taulan gauzak-->
       <tr>
         <td><%="hola" %></td>
         <td></td>
-        <td></td>
-        <td></td>
       </tr>
-      <!--adibide bat non zelan pintatzen den taulan gauzak-->   
+      <!--adibide bat non zelan pintatzen den taulan gauzak-->
       <tr>
        <td><%="hola" %></td>
         <td></td>
-        <td></td>
-        <td></td>
       </tr>
-      <!--adibide bat non zelan pintatzen den taulan gauzak-->   
+      <!--adibide bat non zelan pintatzen den taulan gauzak-->
       <tr>
         <td><%="hola" %></td>
         <td></td>
-        <td></td>
-        <td></td>
       </tr>
-    </tbody>
+    </body>
   </table>
   </div>
 </body>

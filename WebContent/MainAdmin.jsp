@@ -35,15 +35,15 @@
 </head>
 <body>
 <div class="container-fluid bg-1 text-center">  
-<p>
-<br>
-  <img src=C:\Users\S\workspace\Proyecto\WebContent\Imagenes\administrador.jpg class="img-responsive img-circle" style="display: inline" alt="Bird"width="350" height="350"> 		
-</br>
-</p>
+
   <button type="button" class="btn btn-default">Ver Libros</button>
   <button type="button" class="btn btn-primary">Añadir Libros</button>
   <button type="button" class="btn btn-info">Ver Pedidos</button>
-  
+  <p>
+<br>
+  <img src=C:\Users\S\workspace\Proyecto\WebContent\Imagenes\administrador.jpg class="img-responsive img-circle" style="display: inline" alt="Bird"width="250" height="250"> 		
+</br>
+</p>
 </div>
 </body>
 </html>

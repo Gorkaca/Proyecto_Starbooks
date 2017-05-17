@@ -39,14 +39,14 @@
 	<form action="MainCliente.jsp" method="get">
 		<div class="container-fluid bg-1 text-center">
 		<p>
-<img src=C:\Users\S\workspace\Proyecto\WebContent\Imagenes\starbooks1.jpg class="img-responsive img-circle" style="display: inline" alt="Bird"width="350" height="350"> 		
+<img src=C:\Users\S\workspace\Proyecto\WebContent\Imagenes\starbooks1.jpg class="img-responsive img-circle" style="display: inline" alt="Bird"width="250" height="250"> 		
 		</p>
 			nombre:<input type="text"name="nombre" id="nombre"> <br/> 
 			contrasena:<input type="text" name="contraseña" id="contraseña"><br/>
 			<p>
 				<input type="submit" name="login" value="login" id="login">
 			</p>
-		</div>
 	</form>
+	</div>
 </body>
 </html>
