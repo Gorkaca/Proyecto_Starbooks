@@ -12,6 +12,11 @@ public class Libro {
 	
 	
 	//Constructores	
+	
+
+	public Libro() {
+		super();
+	}
 
 	public Libro(int id_libro, String titulo, String autor, int num_pag, String editorial) {
 		super();
@@ -25,6 +30,8 @@ public class Libro {
 	
 	//Getters & Setters
 	
+
+
 	public int getId_libro() {
 		return id_libro;
 	}
