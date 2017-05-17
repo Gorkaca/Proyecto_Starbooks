@@ -35,26 +35,29 @@
 </head>
 <body>
 	<form action="registrarSocio.jsp" method="get">
-		<table style="width: 100%">
+	<div class="container-fluid bg-1 text-center">
+	
+		<table>
 		<tr>
 			<th>izena:<input type="text" name="izena" id="izena"></th>
 			<th>abizena:<input type="text" name="abizena" id="abizena"></th>
 			<th>dni:<input type="text" name="dni" id="dni"></th>	
 			
-			<td><select name="probintzia" id="probintzia">
+			<td>
+			
+			<select  name="probintzia" id="probintzia">
 					<option value="Bizkaia">Bizkaia</option>
 					<option value="Gipuzkoa">Gipuzkoa</option>
 					<option value="Araba">Araba</option>
+				</select>
+				</td>
 			
-					
-				</select></td>
-			
-			<td><select name="poblacion" id="poblacion">
+			<td>
+			<select name="poblacion" id="poblacion">
 				<option value="Bermeo">Bermeo</option>
 				<option value="Mundaka">Mundaka</option>
 				<option value="Sukarrieta">Sukarrieta</option>
-				<option value="Gernika">Gernika</option>
-				
+				<option value="Gernika">Gernika</option>	
 			</select>
 			</td>
 			</tr>
@@ -62,10 +65,11 @@
 		<center>
 			<p>
 				<input type="submit" name="login" value="login">
-				<a href="sozioakIkusi.jsp">ver socios</a>
-				<a href=".jsp">eguneratu</a>
+				<a href="sozioakIkusi.jsp">si</a>
+				<a href=".jsp">no</a>
 			</p>
 		</center>
-	</form>
+		</div>
+	</form>	
 </body>
 </html>

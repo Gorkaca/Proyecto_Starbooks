@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ page import="java.sql.*"%>
+<%@ page import="java.util.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -34,16 +36,19 @@
 </style>
 </head>
 <body>
-<form action="registrarSocio.jsp" method="get">
-	<div class="container-fluid bg-1 text-center">
-  First name:<br>
-  <input type="text" name="firstname" value="Mickey">
-  <br>
-  Last name:<br>
-  <input type="text" name="lastname" value="Mouse">
-  <br><br>
-  <input type="submit" value="Submit">
-</form>
-</div> 
+<form action="MainCliente.jsp" method="get">
+		<div class="container-fluid bg-1 text-center">
+		<p>
+		compra realizada con exito! gracias por su compra.
+		</p>
+		<img src=C:\Users\Gorka\workspace\Starbooks\WebContent\Imagenes\ok2.png class="img-responsive img-circle" style="display: inline" alt="Bird"width="250" height="250"> 		
+<p>
+Quieres seguir comprando?
+			<a href="VerLibros.jsp">si</a>
+			<a href="Login.jsp">no</a>
+</p>
+<!-------aqui tenemos que hacer una operacion para comparar la respuesta de la pregunta de esta pagina ---------->
 </body>
+</form>
+	</div>
 </html>

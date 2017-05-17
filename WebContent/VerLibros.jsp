@@ -37,7 +37,7 @@
 <div class="container-fluid bg-1 text-center"> 
 <h1>Lista de Libros</h1>
 <p>
-<img src=C:\Users\S\workspace\Proyecto\WebContent\Imagenes\starbooks1.jpg class="img-responsive img-circle" style="display: inline" alt="Bird"width="120" height="120"> 		
+<img src=C:\Users\Gorka\workspace\Starbooks\WebContent\Imagenes\starbooks1.jpg class="img-responsive img-circle" style="display: inline" width="120" height="120"> 		
 		</p>
 <table class="table">
     <thead>
