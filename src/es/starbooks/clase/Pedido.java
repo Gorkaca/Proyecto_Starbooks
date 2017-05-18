@@ -20,6 +20,10 @@ public class Pedido {
 	
 	//Getters & Setters
 	
+	public Pedido() {
+		super();
+	}
+
 	public int getId_libro() {
 		return id_libro;
 	}

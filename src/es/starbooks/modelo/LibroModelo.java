@@ -73,12 +73,17 @@ public class LibroModelo extends Conector{
 		
 	}
 	
-	public void insertar (Libro libro) {
+	public void insertar(Libro libro) {
 		
 		try {
 			
-			PreparedStatement pst = this.conexion.prepareStatement("INSERT INTO libro(id_libro, titulo, autor, num_pag, editorial) VALUES(?,?,?,?,?)");
+			PreparedStatement pst = this.conexion.prepareStatement("INSERT INTO libro (titulo,autor,num_pag,editorial) VALUES(?,?,?,?)");
+			pst.setString(1, libro.getTitulo());
+			pst.setString(2, libro.getAutor());
+			pst.setInt(3, libro.getNum_pag());
+			pst.setString(4, libro.getEditorial());
 			
+			pst.execute();
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -86,5 +91,23 @@ public class LibroModelo extends Conector{
 		}
 		
 	}
+	
+	public void borrarPorId(int id_libro){
+		
+		try {
+			
+			PreparedStatement pst = this.conexion.prepareStatement("DELETE FROM libro WHERE id_libro=?");
+			pst.setInt(1, id_libro);
+			
+			pst.execute();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
 	
 }
