@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ page import="java.sql.*"%>
+<%@ page import="java.util.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -45,30 +47,42 @@
 			
 			<td>
 			
-			<select  name="probintzia" id="probintzia">
-					<option value="Bizkaia">Bizkaia</option>
-					<option value="Gipuzkoa">Gipuzkoa</option>
-					<option value="Araba">Araba</option>
-				</select>
+			<div class="btn-group">
+    <button type="button" class="btn btn-primary">Probintzia</button>
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="#">Bizkaia</a></li>
+      <li><a href="#">Araba</a></li>
+        <li><a href="#">Gipuzkoa</a></li>
+    </ul>
+  </div>
 				</td>
 			
 			<td>
-			<select name="poblacion" id="poblacion">
-				<option value="Bermeo">Bermeo</option>
-				<option value="Mundaka">Mundaka</option>
-				<option value="Sukarrieta">Sukarrieta</option>
-				<option value="Gernika">Gernika</option>	
-			</select>
+			<div class="btn-group">
+    <button type="button" class="btn btn-primary">Herria</button>
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="#">Bermeo</a></li>
+      <li><a href="#">Mundaka</a></li>
+        <li><a href="#">Sukarrieta</a></li>
+         <li><a href="#">Gernika</a></li>
+    </ul>
+  </div>
 			</td>
 			</tr>
 		</table>
-		<center>
-			<p>
-				<input type="submit" name="login" value="login">
-				<a href="sozioakIkusi.jsp">si</a>
-				<a href=".jsp">no</a>
-			</p>
-		</center>
+		
+			
+				<button type="button" class="btn btn-primary">Erregistroa bukatu</button>
+				<a href="sozioakIkusi.jsp">bai</a>
+				<a href=".jsp">ez</a>
+			
+		
 		</div>
 	</form>	
 </body>

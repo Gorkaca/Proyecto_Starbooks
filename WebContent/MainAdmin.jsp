@@ -34,14 +34,26 @@
 </style>
 </head>
 <body>
+<div class="container-fluid bg-1 text-right">
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary">Estilo1</button>
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="#">Estilo2</a></li>
+    </ul>
+  </div>
+</div>
+
 <div class="container-fluid bg-1 text-center">  
 
-  <button type="button" class="btn btn-default">Ver Libros</button>
-  <button type="button" class="btn btn-primary">Añadir Libros</button>
-  <button type="button" class="btn btn-info">Ver Pedidos</button>
+  <button type="button" class="btn btn-default"><a href="VerLibros.jsp">Ver Libros</a></button>
+  <button type="button" class="btn btn-primary"><a href="AñadirLibro.jsp">Añadir Libro</a></button>
+  <button type="button" class="btn btn-info"><a href="VerPedidos.jsp">Ver Pedidos</a></button>
   <p>
 <br>
-  <img src=C:\Users\S\workspace\Proyecto\WebContent\Imagenes\administrador.jpg class="img-responsive img-circle" style="display: inline" alt="Bird"width="250" height="250"> 		
+  <img src=C:\Users\Gorka\workspace\Starbooks\WebContent\Imagenes\administrador.jpg class="img-responsive img-circle" style="display: inline" alt="Bird"width="250" height="250"> 		
 </br>
 </p>
 </div>
