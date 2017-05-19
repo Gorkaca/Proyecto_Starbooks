@@ -2,24 +2,26 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="java.sql.*"%>
 <%@ page import="java.util.*"%>
-<%@ page import="es.starbooks.clase.*" %>
-<%@ page import="es.starbooks.modelo.*" %>
+<%@ page import="es.starbooks.clase.*"%>
+<%@ page import="es.starbooks.modelo.*"%>
 <%
 //usuarioa sortu
 
 //parametroak jaso
-String izena = request.getParameter("izena");
-String pasaitza = request.getParameter("pasaitza");
+String nombre = request.getParameter("izena");
+String contrasena = request.getParameter("pasaitza");
+String perfil = request.getParameter("");
 //
 Usuario usuario = new Usuario();
 UsuarioModelo usuarioModelo = new UsuarioModelo();
 usuarioModelo.comprobarRegistro(perfil, nombre, contrasena);
 //hemen komprobatzen du erabiltzaile arrunta edo administradorea den.
 if(usuario != null){
-	session.putValue("sesioa", socio);
+	out.print("erabiltzaile zuzena ");
+	session.putValue("sesioa", usuario);
 	session.getAttribute("sesioa");
 }else
-	
+	out.print("erabiltzailea gaizki");
 {
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -57,25 +59,30 @@ if(usuario != null){
 </head>
 <body>
 	<form action="Login.jsp" method="get">
-	<div class="container-fluid bg-1 text-right">
-  <div class="btn-group">
-    <button type="button" class="btn btn-primary">Estilo1</button>
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" role="menu">
-      <li><a href="#">Estilo2</a></li>
-    </ul>
-  </div>
-		<div class="container-fluid bg-1 text-center">
-		<p>
-<img src=C:\Users\S\workspace\Proyecto\WebContent\Imagenes\starbooks1.jpg class="img-responsive img-circle" style="display: inline" alt="Bird"width="250" height="250"> 		
-		</p>
-			Izena:<input type="text"name="izena" id="izena"> <br/> 
-			Pasaitza:<input type="text" name="pasaitza" id="pasaitza"><br/>
-			<p>
-				<input type="submit" name="login" value="login" id="login">
-			</p>
+		<div class="container-fluid bg-1 text-right">
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary">Estilo1</button>
+				<button type="button" class="btn btn-primary dropdown-toggle"
+					data-toggle="dropdown">
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Estilo2</a></li>
+				</ul>
+			</div>
+			<div class="container-fluid bg-1 text-center">
+				<p>
+					<img
+						src=C:\Users\S\workspace\Proyecto\WebContent\Imagenes\starbooks1.jpg
+						class="img-responsive img-circle" style="display: inline"
+						alt="Bird" width="250" height="250">
+				</p>
+				Izena:<input type="text" name="izena" id="izena"> <br />
+				Pasaitza:<input type="text" name="pasaitza" id="pasaitza"><br />
+				Perfila:<input type="text" name="perfila" id="perfila"><br />
+				<p>
+					<input type="submit" name="login" value="login" id="login">
+				</p>
 	</form>
 	</div>
 </body>
