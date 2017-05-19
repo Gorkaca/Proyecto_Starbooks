@@ -13,7 +13,7 @@ String pasaitza = request.getParameter("pasaitza");
 //
 Usuario usuario = new Usuario();
 UsuarioModelo usuarioModelo = new UsuarioModelo();
-usuarioModelo.();
+usuarioModelo.comprobarRegistro(perfil, nombre, contrasena);
 //hemen komprobatzen du erabiltzaile arrunta edo administradorea den.
 if(usuario != null){
 	session.putValue("sesioa", socio);
