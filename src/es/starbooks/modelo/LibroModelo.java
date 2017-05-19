@@ -28,6 +28,7 @@ public class LibroModelo extends Conector{
 			libro.setAutor(rs.getString("autor"));
 			libro.setNum_pag(rs.getInt("num_pag"));
 			libro.setEditorial(rs.getString("editorial"));
+			libro.setCantidad(rs.getInt("cantidad"));
 			
 			libros.add(libro);
 			
@@ -59,6 +60,8 @@ public class LibroModelo extends Conector{
 			libro.setAutor(rs.getString("autor"));
 			libro.setNum_pag(rs.getInt("num_pag"));
 			libro.setEditorial(rs.getString("editorial"));
+			libro.setCantidad(rs.getInt("cantidad"));
+		
 			
 			libros.add(libro);
 			
