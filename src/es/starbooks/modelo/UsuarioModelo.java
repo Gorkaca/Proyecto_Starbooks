@@ -11,11 +11,14 @@ import es.starbooks.conector.Conector;
 
 public class UsuarioModelo extends Conector{
 	
-	public Usuario seleccionarPorPerfil(String perfil){
+	public Usuario comprobarRegistro(String perfil,String nombre,String contrasena){
 		
 		try {
-			PreparedStatement pst= this.conexion.prepareStatement("SELECT * FROM usuario WHERE perfil=?");
+						
+			PreparedStatement pst= this.conexion.prepareStatement("SELECT * FROM usuario WHERE perfil=? AND nombre=? AND contrasena=?");
 			pst.setString(1, perfil);
+			pst.setString(2, nombre);
+			pst.setString(3, contrasena);
 			
 			ResultSet rs = pst.executeQuery();
 			
