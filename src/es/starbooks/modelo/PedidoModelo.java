@@ -37,10 +37,10 @@ public class PedidoModelo extends Conector{
 				pedido.setLibros(libros);
 				
 				pedidos.add(pedido);
-				
-				return pedidos;
-				
+											
 			}
+			
+			return pedidos;
 					
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
