@@ -34,7 +34,7 @@
 </style>
 </head>
 <body>
-<div class="container-fluid bg-1 text-right">
+<div class="container-fluid bg-1 text-center">
   <div class="btn-group">
     <button type="button" class="btn btn-primary">Estilo1</button>
     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -44,9 +44,9 @@
       <li><a href="#">Estilo2</a></li>
     </ul>
   </div>
-<div class="text-left">
-<span class="glyphicon glyphicon-search"></span> Inserta un titulo de libro
-<a href="#" class="btn btn-default btn-lg"> </a>
+			<span class="glyphicon glyphicon-search"></span>
+			<input type="text" name="izena" id="izena">
+
 <br>
 </br>
 <br>
