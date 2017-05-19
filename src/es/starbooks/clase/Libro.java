@@ -3,12 +3,14 @@ package es.starbooks.clase;
 public class Libro {
 	
 	//Atributos
-		
+	
+	
 	private int id_libro;
 	private String titulo;
 	private String autor;
 	private int num_pag;
 	private String editorial;
+	private int cantidad;
 	
 	
 	//Constructores	
@@ -18,20 +20,10 @@ public class Libro {
 		super();
 	}
 
-	public Libro(int id_libro, String titulo, String autor, int num_pag, String editorial) {
-		super();
-		this.id_libro = id_libro;
-		this.titulo = titulo;
-		this.autor = autor;
-		this.num_pag = num_pag;
-		this.editorial = editorial;
-	}
-		
+	
 	
 	//Getters & Setters
 	
-
-
 	public int getId_libro() {
 		return id_libro;
 	}
@@ -62,5 +54,10 @@ public class Libro {
 	public void setEditorial(String editorial) {
 		this.editorial = editorial;
 	}
-	
+	public int getCantidad() {
+		return cantidad;
+	}
+	public void setCantidad(int cantidad) {
+		this.cantidad = cantidad;
+	}
 }

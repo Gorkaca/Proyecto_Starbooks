@@ -8,23 +8,14 @@ public class Pedido {
 		
 	private int id_libro;
 	private int id_usuario;
-	private int cantidad;
-	private Libro libro;
+	private ArrayList<Libro> libros;
 	
 	//Constructores
 	
 	public Pedido() {
 		super();
 	}
-	
-	public Pedido(int id_libro, int id_usuario, int cantidad, Libro libro) {
-		super();
-		this.id_libro = id_libro;
-		this.id_usuario = id_usuario;
-		this.cantidad = cantidad;
-		this.libro = libro;
-	}
-
+		
 	//Getters & Setters
 		
 	public int getId_libro() {
@@ -40,17 +31,11 @@ public class Pedido {
 	public void setId_usuario(int id_usuario) {
 		this.id_usuario = id_usuario;
 	}
-	public int getCantidad() {
-		return cantidad;
+	public ArrayList<Libro> getLibros() {
+		return libros;
 	}
-	public void setCantidad(int cantidad) {
-		this.cantidad = cantidad;
-	}
-	public Libro getLibro() {
-		return libro;
-	}
-	public void setLibro(Libro libro) {
-		this.libro = libro;
+	public void setLibros(ArrayList<Libro> libros) {
+		this.libros = libros;
 	}
 		
 

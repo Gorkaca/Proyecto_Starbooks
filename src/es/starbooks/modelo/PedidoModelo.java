@@ -20,31 +20,33 @@ public class PedidoModelo extends Conector{
 		try {
 			
 			Statement st = this.conexion.createStatement();
-			ResultSet rs = st.executeQuery("SELECT p.id_usuario AS id, l.titulo AS titulo, l.autor AS autor, l.editorial AS editorial, p.cantidad AS cantidad FROM pedido p JOIN libro l ON (p.id_libro=l.id_libro) WHERE id_libro = '" + id_libro + "'");
+			ResultSet rs = st.executeQuery("SELECT p.id_usuario, l.titulo, l.autor, l.editorial, l.cantidad FROM pedido p JOIN libro l ON (p.id_libro=l.id_libro) WHERE id_libro = '" + id_libro + "'");
 			
 			while(rs.next()){
 				
 				Libro libro = new Libro();
+				libro.setTitulo(rs.getString("titulo"));
+				libro.setAutor(rs.getString("autor"));
+				libro.setEditorial(rs.getString("editorial"));
+				libro.setCantidad(rs.getInt("cantidad"));
+				
+				libros.add(libro);
 								
 				Pedido pedido = new Pedido();
-				pedido.setId_usuario(rs.getInt("id"));				
-				pedido.setCantidad(rs.getInt("cantidad"));
+				pedido.setId_usuario(rs.getInt("id_usuario"));
+				pedido.setLibros(libros);
 				
+				pedidos.add(pedido);
 				
+				return pedidos;
 				
 			}
-			
-
-			
-			
-			
-			
-			
-			
+					
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		return null;
 		
 		

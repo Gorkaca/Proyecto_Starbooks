@@ -3,9 +3,11 @@ package es.starbooks.modelo;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import es.starbooks.clase.Usuario;
 import es.starbooks.conector.Conector;
+
 
 public class UsuarioModelo extends Conector{
 	
@@ -37,4 +39,5 @@ public class UsuarioModelo extends Conector{
 		return null;
 		
 	}
+	
 }
