@@ -13,15 +13,13 @@ String pasaitza = request.getParameter("pasaitza");
 //
 Usuario usuario = new Usuario();
 UsuarioModelo usuarioModelo = new UsuarioModelo();
-usuarioModelo.
+usuarioModelo.();
 //hemen komprobatzen du erabiltzaile arrunta edo administradorea den.
-if( ){
-	out.println("sisteman zaude");
-	session.putValue("sesioa", usuario);
+if(usuario != null){
+	session.putValue("sesioa", socio);
 	session.getAttribute("sesioa");
-	
 }else
-	out.println("ez zaude sisteman");
+	
 {
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
