@@ -11,14 +11,14 @@ import es.starbooks.conector.Conector;
 
 public class UsuarioModelo extends Conector{
 	
-	public Usuario comprobarRegistro(String perfil,String nombre,String contrasena){
+	public Usuario comprobarRegistro(String nombre,String contrasena){
 		
 		try {
 						
-			PreparedStatement pst= this.conexion.prepareStatement("SELECT * FROM usuario WHERE perfil=? AND nombre=? AND contrasena=?");
-			pst.setString(1, perfil);
-			pst.setString(2, nombre);
-			pst.setString(3, contrasena);
+			PreparedStatement pst= this.conexion.prepareStatement("SELECT * FROM usuario WHERE nombre=? AND contrasena=?");
+
+			pst.setString(1, nombre);
+			pst.setString(2, contrasena);
 			
 			ResultSet rs = pst.executeQuery();
 			
@@ -31,6 +31,7 @@ public class UsuarioModelo extends Conector{
 			usuario.setDni(rs.getString("dni"));
 			usuario.setPoblacion(rs.getString("poblacion"));
 			usuario.setProvincia(rs.getString("provincia"));
+			usuario.setPerfil(rs.getString("perfil"));
 			
 			return usuario;
 			
