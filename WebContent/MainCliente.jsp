@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ page import="java.sql.*"%>
+	<%@ page import="java.util.*"%>
+    <%@ page import="es.starbooks.modelo.*"%>
+    <%@ page import="es.starbooks.clase.*"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,6 +16,31 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<% 
+	if(request.getParameter("titulo")!= null){
+		
+	}else{
+		String autor = request.getParameter("autor");
+		LibroModelo libroModelo = new LibroModelo();
+		ArrayList<Libro> libros = libroModelo.seleccionarPorAutor(autor);
+	}
+	
+	%>
+	<!--esto tenemos que meterlo debajo del else que nose muy bien como se hace XD-->
+	<table style="width:100%">
+		  <tr>
+		    <th>Autor</th>
+		    <th>Libro</th> 
+		    <th>Reservar</th>
+		  </tr>
+		  <!-- dentro de un for -->
+		  <tr>
+		    <td><%=libro.%></td>
+		    <td><%=%></td> 
+		    <td><%=%></td>
+		  </tr>
+		  
+		</table>
 <style>
 .bg-1 {
 	background-color: #1abc9c;
@@ -34,14 +64,11 @@
 </style>
 </head>
 <body>
+<form action="MainCliente.jsp">
 			<span class="glyphicon glyphicon-search"></span>
-			<input type="text" name="izena" id="izena">
+			<input type="text" name="autor" id="autor">
 			<input type="submit" value="Buscar">
-
-<br>
-</br>
-<br>
-</br> 
-</div>
+ 
+</form>
 </body>
 </html>

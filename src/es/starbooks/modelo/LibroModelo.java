@@ -10,14 +10,14 @@ import es.starbooks.conector.Conector;
 
 public class LibroModelo extends Conector{
 	
-	public ArrayList<Libro> seleccionarPorTitulo(String titulo){
+	public ArrayList<Libro> seleccionarPorAutor(String autor){
 		
 		ArrayList<Libro> libros = new ArrayList<Libro>();
 		
 		try {
 			
-			PreparedStatement pst = this.conexion.prepareStatement ("SELECT * FROM libro WHERE titulo=?");
-			pst.setString(1, titulo);
+			PreparedStatement pst = this.conexion.prepareStatement ("SELECT * FROM libro WHERE autor=?");
+			pst.setString(1, autor);
 			
 			ResultSet rs = pst.executeQuery();
 			rs.next();
