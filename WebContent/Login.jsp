@@ -16,9 +16,9 @@
 		if (usuario != null) {
 			out.print("erabiltzaile zuzena ");
 			session.putValue("sesioa", usuario);
-			if (usuario.getPerfil() == "cliente") {
+			if (usuario.getPerfil().equals("cliente") ) {
 				response.sendRedirect("MainCliente.jsp");
-			} else if (usuario.getPerfil() == "administrador") {
+			} else if (usuario.getPerfil().equals("administrador")) {
 				response.sendRedirect("MainAdmin.jsp");
 			}
 		} else {
