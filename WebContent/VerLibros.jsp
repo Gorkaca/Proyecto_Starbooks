@@ -34,65 +34,45 @@
 </style>
 </head>
 <body>
-<div class="container-fluid bg-1 text-center"> 
-<h1>Lista de Libros</h1>
-<p>
-<img src=C:\Users\Gorka\workspace\Starbooks\WebContent\Imagenes\starbooks1.jpg class="img-responsive img-circle" style="display: inline" width="120" height="120"> 		
-		</p>
-<table class="table">
-    <thead>
-      <tr>
-        <th>Titulo</th>
-        <th>Autor</th>
-        <th>num_pag</th>
-        <th>Editorial</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-      <!--adibide bat non zelan pintatzen den taulan gauzak-->
-        <td><%="hola" %></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr> 
-      <!--adibide bat non zelan pintatzen den taulan gauzak-->     
-      <tr>
-         <td><%="hola" %></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <!--adibide bat non zelan pintatzen den taulan gauzak-->   
-      <tr>
-        <td><%="hola" %></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <!--adibide bat non zelan pintatzen den taulan gauzak-->   
-      <tr>
-        <td><%="hola" %></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <!--adibide bat non zelan pintatzen den taulan gauzak-->   
-      <tr>
-       <td><%="hola" %></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <!--adibide bat non zelan pintatzen den taulan gauzak-->   
-      <tr>
-        <td><%="hola" %></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
+<%@ page import="es.starbooks.modelo.*" %>
+<%@ page import="es.starbooks.conector.*" %>
+<%@ page import="es.starbooks.clase.*" %>
+
+<%@ page import="java.sql.*" %>
+<%@ page import="java.util.*" %>
+<%
+	LibroModelo libroModelo = new LibroModelo();
+	ArrayList<Libro> libros = libroModelo.seleccionarTodo();
+	%>
+	<p>
+		<img src=C:\Users\Gorka\workspace\Starbooks\WebContent\Imagenes\starbooks1.jpg class="img-responsive img-circle" style="display: inline" width="120" height="120"> 		
+	</p>
+	<div class="container-fluid bg-1 text-center"> 
+	<h1>Lista de Libros</h1>
+	<table border="1" class="table">
+		<thead>
+			<tr>
+				<th>Titulo</th>
+				<th>Autor</th>
+				<th>Num.Pag.</th>
+				<th>Editorial</th>
+				<th>Cantidad</th>
+			</tr>
+		</thead>
+		<%
+	for (Libro libro: libros){
+		%>
+		<tbody>
+			<tr>
+				<td><%=libro.getTitulo()%></td>
+				<td><%=libro.getAutor()%></td>
+				<td><%=libro.getNum_pag()%></td>
+				<td><%=libro.getEditorial()%></td>
+				<td><%=libro.getCantidad()%></td> 				
+			</tr>		
+		<%}%>
+		</tbody>
+	</table>
+	</div>
 </body>
 </html>
