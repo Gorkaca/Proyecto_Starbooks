@@ -11,6 +11,10 @@ import es.starbooks.conector.Conector;
 
 public class UsuarioModelo extends Conector{
 	
+	public UsuarioModelo(){
+		super();
+	}
+	
 	public Usuario comprobarRegistro(String nombre,String contrasena){
 		
 		try {
@@ -43,5 +47,6 @@ public class UsuarioModelo extends Conector{
 		return null;
 		
 	}
+	
 	
 }

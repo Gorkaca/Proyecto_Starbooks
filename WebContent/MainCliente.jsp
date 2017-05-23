@@ -34,18 +34,9 @@
 </style>
 </head>
 <body>
-<div class="container-fluid bg-1 text-center">
-  <div class="btn-group">
-    <button type="button" class="btn btn-primary">Estilo1</button>
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" role="menu">
-      <li><a href="#">Estilo2</a></li>
-    </ul>
-  </div>
 			<span class="glyphicon glyphicon-search"></span>
 			<input type="text" name="izena" id="izena">
+			<input type="submit" value="Buscar">
 
 <br>
 </br>

@@ -36,16 +36,24 @@
 </style>
 </head>
 <body>
-<form action="registrarSocio.jsp" method="get">
-	<div class="container-fluid bg-1 text-center">
-  First name:<br>
-  <input type="text" name="firstname" value="Mickey">
+<form action="AnadirLibro.jsp" method="get">	
+  Titulo:<br>
+  <input type="text" name="titulo" value="">
   <br>
-  Last name:<br>
-  <input type="text" name="lastname" value="Mouse">
+  Autor:<br>
+  <input type="text" name="autor" value="">
+  <br>
+  Numero de paginas:<br>
+  <input type="text" name="Num_pag" value="">
+  <br>
+  Editorial:<br>
+  <input type="text" name="editorial" value="">
+  <br>
+  Cantidad:<br>
+  <input type="text" name="cantidad" value="">
+  <br>
   <br><br>
   <input type="submit" value="Submit">
 </form>
-</div> 
 </body>
 </html>
