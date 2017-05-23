@@ -37,8 +37,6 @@
 </head>
 <body>
 	<form action="registrarSocio.jsp" method="get">
-	<div class="container-fluid bg-1 text-center">
-	
 		<table>
 		<tr>
 			<th>izena:<input type="text" name="izena" id="izena"></th>
@@ -46,44 +44,23 @@
 			<th>dni:<input type="text" name="dni" id="dni"></th>	
 			
 			<td>
-			
-			<div class="btn-group">
-    <button type="button" class="btn btn-primary">Probintzia</button>
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" role="menu">
-      <li><a href="#">Bizkaia</a></li>
-      <li><a href="#">Araba</a></li>
-        <li><a href="#">Gipuzkoa</a></li>
-    </ul>
-  </div>
-				</td>
-			
-			<td>
-			<div class="btn-group">
-    <button type="button" class="btn btn-primary">Herria</button>
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" role="menu">
-      <li><a href="#">Bermeo</a></li>
-      <li><a href="#">Mundaka</a></li>
-        <li><a href="#">Sukarrieta</a></li>
-         <li><a href="#">Gernika</a></li>
-    </ul>
-  </div>
+	<select>
+  <option value="Bizkaia">Bizkaia</option>
+  <option value="Araba">Araba</option>
+  <option value="Gipuzkoa">Gipuzkoa</option>
+  	</select>
+	<select>
+  <option value="Bermeo">Bermeo</option>
+  <option value="Mundaka">Mundaka</option>
+  <option value="Sukarrieta">Sukarrieta</option>
+  <option value="Gernika">Gernika</option>
+	</select>
 			</td>
 			</tr>
 		</table>
 		
 			
-				<button type="button" class="btn btn-primary">Erregistroa bukatu</button>
-				<a href="sozioakIkusi.jsp">bai</a>
-				<a href=".jsp">ez</a>
-			
-		
-		</div>
+				<input type="submit" value="Terminar registro">
 	</form>	
 </body>
 </html>
