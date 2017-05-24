@@ -32,9 +32,9 @@
 </head>
 <body>
 <form action="Login.jsp">
-<input type="text" name="nombre" id="nombre">
-<input type="text" name="contra" id="contra">
-<input type="submit" value="Login">
+	<input type="text" name="nombre" id="nombre">
+	<input type="text" name="contra" id="contra">
+	<input type="submit" value="Login">
 </form>
 </body>
 </html>
