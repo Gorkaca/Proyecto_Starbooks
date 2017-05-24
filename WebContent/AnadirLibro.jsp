@@ -36,24 +36,63 @@
 </style>
 </head>
 <body>
-<form action="AnadirLibro.jsp" method="get">	
-  Titulo:<br>
-  <input type="text" name="titulo" value="">
-  <br>
-  Autor:<br>
-  <input type="text" name="autor" value="">
-  <br>
-  Numero de paginas:<br>
-  <input type="text" name="Num_pag" value="">
-  <br>
-  Editorial:<br>
-  <input type="text" name="editorial" value="">
-  <br>
-  Cantidad:<br>
-  <input type="text" name="cantidad" value="">
-  <br>
-  <br><br>
-  <input type="submit" value="Submit">
-</form>
+<%@ page import="es.starbooks.modelo.*" %>
+<%@ page import="es.starbooks.conector.*" %>
+<%@ page import="es.starbooks.clase.*" %>
+
+<%@ page import="java.sql.*" %>
+<%@ page import="java.util.*" %>
+<%
+
+	Libro libro = new Libro();
+
+	if(request.getParameter("titulo") != null || request.getParameter("autor") != null || request.getParameter("numero_pag") != null 
+	|| request.getParameter("editorial") != null || request.getParameter("cantidad") != null){
+		
+		String titulo= request.getParameter("titulo");
+		String autor= request.getParameter("autor");
+		String num_pag= request.getParameter("numero_pag");
+		String editorial= request.getParameter("editorial");
+		String cantidad= request.getParameter("cantidad");
+		
+		libro.setTitulo(titulo);
+		libro.setAutor(autor);
+		libro.setNum_pag(Integer.parseInt(num_pag));
+		libro.setEditorial(editorial);
+		libro.setCantidad(Integer.parseInt(cantidad));
+		
+		LibroModelo libroModelo = new LibroModelo();
+		libroModelo.insertar(libro);
+		
+	}
+	
+%>
+
+	<form action="AnadirLibro.jsp" method="get">	
+  		<h1>Formulario Libro</h1>
+		<table style="width:100%">
+			<tr>
+				<th>Titulo:</th>
+				<td><input type="text" name="titulo" id="titulo"/></td>
+			</tr>
+			<tr>
+				<th>Autor:</th>
+				<td><input type="text" name="autor" id="autor"/></td>
+			</tr>
+			<tr>
+				<th>Numero Pag.:</th>
+				<td><input type="text" name="numero_pag" id="numero_pag"/></td>
+			</tr>
+			<tr>
+				<th>Editorial:</th>
+				<td><input type="text" name="editorial" id="editorial"/></td>					
+			</tr>
+			<tr>
+				<th>Cantidad:</th>
+				<td><input type="text" name="cantidad" id="cantidad"/></td>
+			</tr>			
+		</table>
+			<input type ="submit" name="añadir" value="Añadir" />
+	</form>
 </body>
 </html>
