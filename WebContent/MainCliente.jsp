@@ -4,6 +4,7 @@
 <%@ page import="java.util.*"%>
 <%@ page import="es.starbooks.modelo.*"%>
 <%@ page import="es.starbooks.clase.*"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -16,13 +17,15 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <%
+ArrayList<Libro> libros = new ArrayList<Libro>();
 	if (request.getParameter("titulo") != null) {
 		//hemen utzik ez badao topatuko du  autorearengatik liburuak.
-
+		LibroModelo libroModelo = new LibroModelo();
+		libros = libroModelo.seleccionarTodo();
 	} else {
 		String autor = request.getParameter("autor");
 		LibroModelo libroModelo = new LibroModelo();
-		ArrayList<Libro> libros = libroModelo.seleccionarPorAutor(autor);
+		libros = libroModelo.seleccionarPorAutor(autor);
 	}
 %>
 
@@ -58,9 +61,8 @@
 	<form action="MainCliente.jsp">
 		<span class="glyphicon glyphicon-search"></span> <input type="text"
 			name="autor" id="autor"> <input type="submit" value="Buscar">
-		<%
-			Libro libro = new Libro();
-		%>
+			
+		
 		<table style="width: 100%">
 			<tr>
 				<th>Autor</th>
@@ -68,12 +70,20 @@
 				<th>Reservar</th>
 			</tr>
 			<!-- dentro de un for -->
-			<tr>
-				<td><%=libro.getAutor()%></td>
-				<td><%=libro.getTitulo()%></td>
-				<td><%=libro.getNum_pag()%></td>
-			</tr>
+		<%
+			for (Libro libro : libros) {
+		%>
 
+			<tr>
+				<td><%=libro.getTitulo()%></td>
+				<td><%=libro.getAutor()%></td>
+				<td><%=libro.getNum_pag()%></td>
+				<td><%=libro.getEditorial()%></td>
+				<td><%=libro.getCantidad()%></td> 
+			</tr>
+			<%
+				}
+			%>
 		</table>
 	</form>
 </body>
