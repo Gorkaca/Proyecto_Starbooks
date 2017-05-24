@@ -39,7 +39,7 @@ public class LibroModelo extends Conector{
 			e.printStackTrace();
 		}
 				
-		return null;		
+		return libros;		
 		
 	}
 	
