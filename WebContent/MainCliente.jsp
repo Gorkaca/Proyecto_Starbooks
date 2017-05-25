@@ -17,15 +17,16 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <%
+
 ArrayList<Libro> libros = new ArrayList<Libro>();
-	if (request.getParameter("titulo") != null) {
+	if (request.getParameter("autor") != null) {
 		//hemen utzik ez badao topatuko du  autorearengatik liburuak.
-		LibroModelo libroModelo = new LibroModelo();
-		libros = libroModelo.seleccionarTodo();
-	} else {
 		String autor = request.getParameter("autor");
 		LibroModelo libroModelo = new LibroModelo();
-		libros = libroModelo.seleccionarPorAutor(autor);
+		libros = libroModelo.seleccionarPorAutor(autor);		
+	} else {
+		LibroModelo libroModelo = new LibroModelo();
+		libros = libroModelo.seleccionarTodo();
 	}
 %>
 

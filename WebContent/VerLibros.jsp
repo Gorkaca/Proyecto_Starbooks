@@ -45,7 +45,7 @@
 	ArrayList<Libro> libros = libroModelo.seleccionarTodo();
 	%>
 	<p>
-		<img src=C:\Users\Gorka\workspace\Starbooks\WebContent\Imagenes\starbooks1.jpg class="img-responsive img-circle" style="display: inline" width="120" height="120"> 		
+		<img src=Proyecto_Starbooks/WebContent/Imagenes/starbooks1.jpg class="img-responsive img-circle" style="display: inline" width="120" height="120"> 		
 	</p>
 	<div class="container-fluid bg-1 text-center"> 
 	<h1>Lista de Libros</h1>

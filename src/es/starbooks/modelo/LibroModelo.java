@@ -16,7 +16,7 @@ public class LibroModelo extends Conector{
 		
 		try {
 			
-			PreparedStatement pst = this.conexion.prepareStatement ("SELECT * FROM libro WHERE autor=" + autor + "'");
+			PreparedStatement pst = this.conexion.prepareStatement ("SELECT * FROM libro WHERE autor='" + autor + "'");
 						
 			ResultSet rs = pst.executeQuery();
 			while (rs.next()){
