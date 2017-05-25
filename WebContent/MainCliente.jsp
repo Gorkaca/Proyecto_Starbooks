@@ -80,7 +80,7 @@ ArrayList<Libro> libros = new ArrayList<Libro>();
 				<td><%=libro.getNum_pag()%></td>
 				<td><%=libro.getEditorial()%></td>
 				<td><%=libro.getCantidad()%></td>
-				<td><a href="FormularioCompra.jsp?id=<%=libro.getId_libro()%>">Comprar</a></td> 
+				<td><a href="Confirmacion.jsp?id=<%=libro.getId_libro()%>">Comprar</a></td> 
 			</tr>
 			<%
 				}
