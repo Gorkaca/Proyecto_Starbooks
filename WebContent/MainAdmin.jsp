@@ -43,6 +43,6 @@
 <form action="VerPedidos.jsp">
 <input type="submit" value="Ver Pedidos">
 </form>
-  <img src=C:\Users\S\workspace\Proyecto\WebContent\Imagenes\administrador.jpg> 		
+  <img src=Imagenes/administrador.jpg> 		
 </body>
 </html>

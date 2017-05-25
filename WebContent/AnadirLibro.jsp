@@ -68,7 +68,7 @@
 	
 %>
 
-	<form action="AnadirLibro.jsp" method="get">	
+	<form action="AnadirLibro.jsp" method="get">
   		<h1>Añadir Libro</h1>
 		<table style="width:100%">
 			<tr>
@@ -93,6 +93,9 @@
 			</tr>			
 		</table>
 			<input type ="submit" name="añadir" value="Añadir" />
+			<div class= "text-center">
+			<img src=Imagenes\anadir_libro.jpg>
+			</div>
 	</form>
 </body>
 </html>

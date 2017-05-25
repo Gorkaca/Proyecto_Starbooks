@@ -44,10 +44,10 @@
 	LibroModelo libroModelo = new LibroModelo();
 	ArrayList<Libro> libros = libroModelo.seleccionarTodo();
 	%>
-	<p>
-		<img src=Proyecto_Starbooks/WebContent/Imagenes/starbooks1.jpg class="img-responsive img-circle" style="display: inline" width="120" height="120"> 		
-	</p>
 	<div class="container-fluid bg-1 text-center"> 
+		<img src=Imagenes/starbooks1.jpg class="img-responsive img-circle" style="display: inline" width="120" height="120"> 		
+	
+	
 	<h1>Lista de Libros</h1>
 	<table border="1" class="table">
 		<thead>

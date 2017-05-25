@@ -39,12 +39,12 @@
 	<form action="MainCliente.jsp" method="get">
 		<div class="container-fluid bg-1 text-center">
 			<br> <strong>compra </strong> realizada con exito! </br> <img
-				src=C:\Users\S\workspace\Proyecto\WebContent\Imagenes\ok2.png
+				src=Imagenes\ok2.png
 				class="img-responsive img-circle" style="display: inline" alt="Bird"
 				width="250" height="250">
 			<p>
-				Quieres seguir comprando? <a href="VerLibros.jsp">si</a> <a
-					href="Login.jsp">no</a>
+				Quieres seguir comprando? <a href="MainCliente.jsp">si</a> <a
+					href="Login.jsp">logout</a>
 			</p>
 			<!-------aqui tenemos que hacer una operacion para comparar la respuesta de la pregunta de esta pagina ---------->
 </body>
