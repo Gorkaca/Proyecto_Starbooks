@@ -39,7 +39,7 @@
 	<form action="MainCliente.jsp" method="get">
 		<div class="container-fluid bg-1 text-center">
 			<br> <strong>compra </strong> realizada con exito! </br> <img
-				src=C:\Users\Gorka\workspace\Starbooks\WebContent\Imagenes\ok2.png
+				src=C:\Users\S\workspace\Proyecto\WebContent\Imagenes\ok2.png
 				class="img-responsive img-circle" style="display: inline" alt="Bird"
 				width="250" height="250">
 			<p>
