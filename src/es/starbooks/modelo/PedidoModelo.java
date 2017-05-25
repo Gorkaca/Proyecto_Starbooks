@@ -49,6 +49,9 @@ public class PedidoModelo extends Conector{
 		
 		return null;
 		
+	}
+	
+	public void insertar(Pedido pedido){	
 		
 		
 	}
