@@ -29,12 +29,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+
 </head>
 <body>
 <form action="Login.jsp">
+
+<img src="C:\Users\Gorka\workspace\starbooks1.1\WebContent\Imagenes\starbooks1.jpg"> 	
 	<input type="text" name="nombre" id="nombre">
 	<input type="text" name="contra" id="contra">
 	<input type="submit" value="Login">
+
 </form>
 </body>
 </html>

@@ -60,7 +60,7 @@
 		</table>
 		
 			
-				<input type="submit" value="Terminar registro">
+				<input type="submit" value="Terminar compra">
 	</form>	
 </body>
 </html>

@@ -1,75 +1,46 @@
-/*
-Al cuerpo de la
-pagina se aplica el tamaño de fuente
- */
-body{
-	font-size: 12px;
+/* Add a dark background color with a little bit see-through */ 
+.navbar {
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity:0.9;
 }
-/**
- * se aplica el ancho, margen centrado
- * borde de un pixel con redondeado, y rellenado
- * a la izquierda y derecha
- */
-#Contenedor{
-	width: 400px;
-	margin: 50px auto;
-	background-color: #F3EDED;
-        border: 1px solid #ECE8E8;
-	height: 400px;
-	border-radius:8px;
-	padding: 0px 9px 0px 9px;
+
+/* Add a gray color to all navbar links */
+.navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
 }
- 
-/**
- * Aplicando al icono de usuario el color de fondo,
- * rellenado de 20px y un redondeado de 120px en forma
- * de un circulo
- */
-.Icon span{
-      background: #A8A6A6;
-      padding: 20px;
-      border-radius: 120px;
+
+/* On hover, the links will turn white */
+.navbar-nav li a:hover {
+    color: #fff !important;
 }
-/**
- * Se aplica al contenedor madre un margen de tamaño 10px hacia la cabecera y pie,
- * color de fuente blanco,un tamaño de fuente 50px y texto centrado.
- */
-.Icon{
-     margin-top: 10px;
-     margin-bottom:10px; 
-     color: #FFF;
-     font-size: 50px;
-     text-align: center;
+
+/* The active link */
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color:#29292c !important;
 }
-/**
- * Se aplica al contenedor donde muestra en el pie
- * la opción de olvidaste tu contraseña?
- */
-.opcioncontra{
-	text-align: center;
-	margin-top: 20px;
-	font-size: 14px;
+
+/* Remove border color from the collapsible button */
+.navbar-default .navbar-toggle {
+    border-color: transparent;
 }
- 
-/**
- * En las siguientes lineas
- * se define el diseño adaptable, para que
- * se muestre en los dispositivos móviles
- */
- 
-/******************************************/
-/***    DISEÑO PARA MOVILES 320        ****/
-/******************************************/
-@media only screen and (max-width:320px){
-#Contenedor{
-	width: 100%;
-	height: auto;
-	margin: 0px;
+
+/* Dropdown */
+.open .dropdown-toggle {
+    color: #fff ;
+    background-color: #555 !important;
 }
- 
-/******************************************/
-/***    DISEÑO PARA MOVILES 240        ****/
-/******************************************/
-@media only screen and (max-width:240px){
-	
+
+/* Dropdown links */
+.dropdown-menu li a {
+    color: #000 !important;
+}
+
+/* On hover, the dropdown links will turn red */
+.dropdown-menu li a:hover {
+    background-color: red !important;
 }
