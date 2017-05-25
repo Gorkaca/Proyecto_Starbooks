@@ -45,7 +45,7 @@
 	ArrayList<Libro> libros = libroModelo.seleccionarTodo();
 	%>
 	<p>
-		<img src=C:\Users\Gorka\workspace\Starbooks\WebContent\Imagenes\starbooks1.jpg class="img-responsive img-circle" style="display: inline" width="120" height="120"> 		
+		<img src=Proyecto_Starbooks/WebContent/Imagenes/starbooks1.jpg class="img-responsive img-circle" style="display: inline" width="120" height="120"> 		
 	</p>
 	<div class="container-fluid bg-1 text-center"> 
 	<h1>Lista de Libros</h1>
@@ -68,7 +68,8 @@
 				<td><%=libro.getAutor()%></td>
 				<td><%=libro.getNum_pag()%></td>
 				<td><%=libro.getEditorial()%></td>
-				<td><%=libro.getCantidad()%></td> 				
+				<td><%=libro.getCantidad()%></td> 
+				<td><a href="BorrarLibro.jsp?id=<%=libro.getId_libro()%>">Borrar</a></td>			
 			</tr>		
 		<%}%>
 		</tbody>

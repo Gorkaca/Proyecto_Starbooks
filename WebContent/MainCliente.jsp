@@ -17,20 +17,18 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <%
+
 ArrayList<Libro> libros = new ArrayList<Libro>();
-	if (request.getParameter("titulo") != null) {
+	if (request.getParameter("autor") != null) {
 		//hemen utzik ez badao topatuko du  autorearengatik liburuak.
-		LibroModelo libroModelo = new LibroModelo();
-		libros = libroModelo.seleccionarTodo();
-	} else {
 		String autor = request.getParameter("autor");
 		LibroModelo libroModelo = new LibroModelo();
-		libros = libroModelo.seleccionarPorAutor(autor);
+		libros = libroModelo.seleccionarPorAutor(autor);		
+	} else {
+		LibroModelo libroModelo = new LibroModelo();
+		libros = libroModelo.seleccionarTodo();
 	}
 %>
-
-
-
 
 
 <!--esto tenemos que meterlo debajo del else que nose muy bien como se hace XD-->
@@ -65,9 +63,11 @@ ArrayList<Libro> libros = new ArrayList<Libro>();
 		
 		<table style="width: 100%">
 			<tr>
+				<th>Titulo</th>
 				<th>Autor</th>
-				<th>Libro</th>
-				<th>Reservar</th>
+				<th>Numero Pag.</th>
+				<th>Editorial</th>
+				<th>Cantidad</th>
 			</tr>
 			<!-- dentro de un for -->
 		<%
@@ -79,7 +79,8 @@ ArrayList<Libro> libros = new ArrayList<Libro>();
 				<td><%=libro.getAutor()%></td>
 				<td><%=libro.getNum_pag()%></td>
 				<td><%=libro.getEditorial()%></td>
-				<td><%=libro.getCantidad()%></td> 
+				<td><%=libro.getCantidad()%></td>
+				<td><a href="FormularioCompra.jsp?id=<%=libro.getId_libro()%>">Comprar</a></td> 
 			</tr>
 			<%
 				}

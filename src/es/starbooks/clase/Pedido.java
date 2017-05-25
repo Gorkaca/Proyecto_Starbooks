@@ -12,10 +12,18 @@ public class Pedido {
 	
 	//Constructores
 	
+	
 	public Pedido() {
 		super();
 	}
 		
+	public Pedido(int id_libro, int id_usuario, ArrayList<Libro> libros) {
+		super();
+		this.id_libro = id_libro;
+		this.id_usuario = id_usuario;
+		this.libros = libros;
+	}
+
 	//Getters & Setters
 		
 	public int getId_libro() {

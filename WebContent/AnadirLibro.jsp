@@ -69,7 +69,7 @@
 %>
 
 	<form action="AnadirLibro.jsp" method="get">	
-  		<h1>Formulario Libro</h1>
+  		<h1>Añadir Libro</h1>
 		<table style="width:100%">
 			<tr>
 				<th>Titulo:</th>
