@@ -16,21 +16,13 @@ public class LibroModelo extends Conector{
 		
 		try {
 			
-			PreparedStatement pst = this.conexion.prepareStatement ("SELECT * FROM libro WHERE autor=?");
-			pst.setString(1, autor);
-			
+			PreparedStatement pst = this.conexion.prepareStatement ("SELECT * FROM libro WHERE autor=" + autor + "'");
+						
 			ResultSet rs = pst.executeQuery();
-			rs.next();
-			
-			Libro libro = new Libro();
-			libro.setId_libro(rs.getInt("id_libro"));
-			libro.setTitulo(rs.getString("titulo"));
-			libro.setAutor(rs.getString("autor"));
-			libro.setNum_pag(rs.getInt("num_pag"));
-			libro.setEditorial(rs.getString("editorial"));
-			libro.setCantidad(rs.getInt("cantidad"));
-			
-			libros.add(libro);
+			while (rs.next()){
+				libros.add(new Libro(rs.getInt("id_libro"),rs.getString("titulo"),rs.getString("autor"),rs.getInt("num_pag"),rs.getString("editorial"),rs.getInt("cantidad")));
+					
+			}
 			
 			return libros;
 						
@@ -46,24 +38,16 @@ public class LibroModelo extends Conector{
 	public ArrayList<Libro> seleccionarTodo(){
 		
 		ArrayList<Libro> libros = new ArrayList<Libro>();
-		
+				
 		try {
 			
 			PreparedStatement pst = this.conexion.prepareStatement("SELECT * FROM libro");
 			
 			ResultSet rs = pst.executeQuery();
-			rs.next();
-			
-			Libro libro = new Libro();
-			libro.setId_libro(rs.getInt("id_libro"));
-			libro.setTitulo(rs.getString("titulo"));
-			libro.setAutor(rs.getString("autor"));
-			libro.setNum_pag(rs.getInt("num_pag"));
-			libro.setEditorial(rs.getString("editorial"));
-			libro.setCantidad(rs.getInt("cantidad"));
-		
-			
-			libros.add(libro);
+			while (rs.next()){
+				libros.add(new Libro(rs.getInt("id_libro"),rs.getString("titulo"),rs.getString("autor"),rs.getInt("num_pag"),rs.getString("editorial"),rs.getInt("cantidad")));
+					
+			}
 			
 			return libros;
 			
@@ -80,11 +64,12 @@ public class LibroModelo extends Conector{
 		
 		try {
 			
-			PreparedStatement pst = this.conexion.prepareStatement("INSERT INTO libro (titulo,autor,num_pag,editorial) VALUES(?,?,?,?)");
+			PreparedStatement pst = this.conexion.prepareStatement("INSERT INTO libro (titulo,autor,num_pag,editorial,cantidad) VALUES(?,?,?,?,?)");
 			pst.setString(1, libro.getTitulo());
 			pst.setString(2, libro.getAutor());
 			pst.setInt(3, libro.getNum_pag());
 			pst.setString(4, libro.getEditorial());
+			pst.setInt(5, libro.getCantidad());
 			
 			pst.execute();
 			

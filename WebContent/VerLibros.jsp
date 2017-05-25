@@ -68,7 +68,8 @@
 				<td><%=libro.getAutor()%></td>
 				<td><%=libro.getNum_pag()%></td>
 				<td><%=libro.getEditorial()%></td>
-				<td><%=libro.getCantidad()%></td> 				
+				<td><%=libro.getCantidad()%></td> 
+				<td><a href="BorrarLibro.jsp?id=<%=libro.getId_libro()%>">Borrar</a></td>			
 			</tr>		
 		<%}%>
 		</tbody>

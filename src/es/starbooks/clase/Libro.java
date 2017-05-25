@@ -20,7 +20,16 @@ public class Libro {
 		super();
 	}
 
-	
+	public Libro(int id_libro, String titulo, String autor, int num_pag, String editorial, int cantidad) {
+		super();
+		this.id_libro = id_libro;
+		this.titulo = titulo;
+		this.autor = autor;
+		this.num_pag = num_pag;
+		this.editorial = editorial;
+		this.cantidad = cantidad;
+	}
+
 	
 	//Getters & Setters
 	

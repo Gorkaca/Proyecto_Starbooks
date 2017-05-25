@@ -30,9 +30,6 @@ ArrayList<Libro> libros = new ArrayList<Libro>();
 %>
 
 
-
-
-
 <!--esto tenemos que meterlo debajo del else que nose muy bien como se hace XD-->
 
 <style>
@@ -65,9 +62,11 @@ ArrayList<Libro> libros = new ArrayList<Libro>();
 		
 		<table style="width: 100%">
 			<tr>
+				<th>Titulo</th>
 				<th>Autor</th>
-				<th>Libro</th>
-				<th>Reservar</th>
+				<th>Numero Pag.</th>
+				<th>Editorial</th>
+				<th>Cantidad</th>
 			</tr>
 			<!-- dentro de un for -->
 		<%
@@ -79,7 +78,8 @@ ArrayList<Libro> libros = new ArrayList<Libro>();
 				<td><%=libro.getAutor()%></td>
 				<td><%=libro.getNum_pag()%></td>
 				<td><%=libro.getEditorial()%></td>
-				<td><%=libro.getCantidad()%></td> 
+				<td><%=libro.getCantidad()%></td>
+				<td><a href="FormularioCompra.jsp?id=<%=libro.getId_libro()%>">Comprar</a></td> 
 			</tr>
 			<%
 				}
