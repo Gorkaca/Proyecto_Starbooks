@@ -18,6 +18,7 @@
 	LibroModelo libroModelo = new LibroModelo();
 	libroModelo.borrarPorId(Integer.parseInt(id_libro));
 	out.println("Libro borrado");
+	response.sendRedirect("VerLibros.jsp");
 %>
 
 

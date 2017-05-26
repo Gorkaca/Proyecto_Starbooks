@@ -12,27 +12,6 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style>
-.bg-1 {
-	background-color: #1abc9c;
-	color: #ffffff;
-}
-
-.bg-2 {
-	background-color: #474e5d;
-	color: #ffffff;
-}
-
-.bg-3 {
-	background-color: #ffffff;
-	color: #555555;
-}
-
-.container-fluid {
-	padding-top: 70px;
-	padding-bottom: 70px;
-}
-</style>
 </head>
 <%@ page import="es.starbooks.modelo.*" %>
 <%@ page import="es.starbooks.conector.*" %>
@@ -48,7 +27,15 @@
 	
 %>
 <body>
-
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav text-right">
+      <li><a href="Login.jsp">Logout</a></li>
+    </ul>
+  </div>
+</nav>
 <div class="container-fluid bg-1 text-center"> 
 <h1>Lista de pedidos</h1>
 <p>

@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%
+	int session_lenght = session.getValueNames().length;
+	if (session_lenght == 0) {
+		response.sendRedirect("Login.jsp");
+	}
+
+	Usuario usuario = (Usuario)session.getAttribute("sesioa");
+%>
 <%@ page import="java.sql.*"%>
 <%@ page import="java.util.*"%>
 <%@ page import="es.starbooks.modelo.*"%>
@@ -17,50 +25,37 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <%
+	//sesioa komprobatu.
 
-ArrayList<Libro> libros = new ArrayList<Libro>();
+	ArrayList<Libro> libros = new ArrayList<Libro>();
 	if (request.getParameter("autor") != null) {
 		//hemen utzik ez badao topatuko du  autorearengatik liburuak.
 		String autor = request.getParameter("autor");
 		LibroModelo libroModelo = new LibroModelo();
-		libros = libroModelo.seleccionarPorAutor(autor);		
+		libros = libroModelo.seleccionarPorAutor(autor);
 	} else {
 		LibroModelo libroModelo = new LibroModelo();
 		libros = libroModelo.seleccionarTodo();
 	}
 %>
-
-
-<!--esto tenemos que meterlo debajo del else que nose muy bien como se hace XD-->
-
-<style>
-.bg-1 {
-	background-color: #1abc9c;
-	color: #ffffff;
-}
-
-.bg-2 {
-	background-color: #474e5d;
-	color: #ffffff;
-}
-
-.bg-3 {
-	background-color: #ffffff;
-	color: #555555;
-}
-
-.container-fluid {
-	padding-top: 70px;
-	padding-bottom: 70px;
-}
-</style>
 </head>
 <body>
-	<form action="MainCliente.jsp">
+<form action="MainCliente.jsp">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav text-right">
+      <li><a href="Logout.jsp">Logout</a></li>
+      <li>kaixo<%= usuario.getNombre() %>
+    </ul>
+  </div>
+</nav>
+	
 		<span class="glyphicon glyphicon-search"></span> <input type="text"
 			name="autor" id="autor"> <input type="submit" value="Buscar">
-			
-		
+ 
+
 		<table style="width: 100%">
 			<tr>
 				<th>Titulo</th>
@@ -70,9 +65,9 @@ ArrayList<Libro> libros = new ArrayList<Libro>();
 				<th>Cantidad</th>
 			</tr>
 			<!-- dentro de un for -->
-		<%
-			for (Libro libro : libros) {
-		%>
+			<%
+				for (Libro libro : libros) {
+			%>
 
 			<tr>
 				<td><%=libro.getTitulo()%></td>
@@ -80,7 +75,7 @@ ArrayList<Libro> libros = new ArrayList<Libro>();
 				<td><%=libro.getNum_pag()%></td>
 				<td><%=libro.getEditorial()%></td>
 				<td><%=libro.getCantidad()%></td>
-				<td><a href="Confirmacion.jsp?id=<%=libro.getId_libro()%>">Comprar</a></td> 
+				<td><a href="Confirmacion.jsp?id=<%=libro.getId_libro()%>">Comprar</a></td>
 			</tr>
 			<%
 				}
