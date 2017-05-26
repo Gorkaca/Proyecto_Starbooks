@@ -1,16 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 	
-<%@ page import="es.starbooks.modelo.*" %>
-<%@ page import="es.starbooks.conector.*" %>
-<%@ page import="es.starbooks.clase.*" %>	
-	
+<%
+	int session_lenght = session.getValueNames().length;
+	if (session_lenght == 0) {
+		response.sendRedirect("Login.jsp");
+	}
+
+	Usuario usuario = (Usuario)session.getAttribute("sesioa");
+%>
 <%@ page import="java.sql.*"%>
 <%@ page import="java.util.*"%>
+<%@ page import="es.starbooks.modelo.*"%>
+<%@ page import="es.starbooks.clase.*"%>
 <%
 	
 
-	Usuario usuario = (Usuario)session.getAttribute("sesioa");
+    usuario = (Usuario)session.getAttribute("sesioa");
 	int id_usuario = usuario.getId_usuario();
 	
 	String id_libro = request.getParameter("id");
@@ -66,8 +72,9 @@
 				class="img-responsive img-circle" style="display: inline" alt="Bird"
 				width="250" height="250">
 			<p>
-				Quieres seguir comprando? <a href="MainCliente.jsp">si</a> <a
-					href="Login.jsp">logout</a>
+				Quieres seguir comprando? <a href="MainCliente.jsp">si</a> 
+				<a href="Logout.jsp">Logout</a>
+				
 			</p>
 			<!-------aqui tenemos que hacer una operacion para comparar la respuesta de la pregunta de esta pagina ---------->
 </body>
