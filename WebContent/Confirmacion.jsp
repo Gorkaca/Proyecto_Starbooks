@@ -1,7 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	
+<%@ page import="es.starbooks.modelo.*" %>
+<%@ page import="es.starbooks.conector.*" %>
+<%@ page import="es.starbooks.clase.*" %>	
+	
 <%@ page import="java.sql.*"%>
 <%@ page import="java.util.*"%>
+<%
+	
+
+	Usuario usuario = (Usuario)session.getAttribute("sesioa");
+	int id_usuario = usuario.getId_usuario();
+	
+	String id_libro = request.getParameter("id");
+	
+	Pedido pedido = new Pedido();
+	
+	pedido.setId_usuario(id_usuario);
+	pedido.setId_libro(Integer.parseInt(id_libro));
+	
+	PedidoModelo pedidoModelo = new PedidoModelo();
+	pedidoModelo.insertarPedido(Integer.parseInt(id_libro), id_usuario);
+	
+%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>

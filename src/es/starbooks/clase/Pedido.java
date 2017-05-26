@@ -8,7 +8,7 @@ public class Pedido {
 		
 	private int id_libro;
 	private int id_usuario;
-	private ArrayList<Libro> libros;
+	private Libro libro;
 	
 	//Constructores
 	
@@ -17,11 +17,11 @@ public class Pedido {
 		super();
 	}
 		
-	public Pedido(int id_libro, int id_usuario, ArrayList<Libro> libros) {
+	public Pedido(int id_libro, int id_usuario, Libro libro) {
 		super();
 		this.id_libro = id_libro;
 		this.id_usuario = id_usuario;
-		this.libros = libros;
+		this.libro = libro;
 	}
 
 	//Getters & Setters
@@ -39,11 +39,11 @@ public class Pedido {
 	public void setId_usuario(int id_usuario) {
 		this.id_usuario = id_usuario;
 	}
-	public ArrayList<Libro> getLibros() {
-		return libros;
+	public Libro getLibro() {
+		return libro;
 	}
-	public void setLibros(ArrayList<Libro> libros) {
-		this.libros = libros;
+	public void setLibro(Libro libro) {
+		this.libro = libro;
 	}
 		
 

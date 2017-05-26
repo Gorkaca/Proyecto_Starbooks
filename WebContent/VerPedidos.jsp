@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ page import="java.sql.*"%>
+	pageEncoding="ISO-8859-1"%>
+<%@ page import="java.sql.*"%>
 <%@ page import="java.util.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -34,52 +34,51 @@
 }
 </style>
 </head>
-<%@ page import="es.starbooks.modelo.*" %>
-<%@ page import="es.starbooks.conector.*" %>
-<%@ page import="es.starbooks.clase.*" %>
+<%@ page import="es.starbooks.modelo.*"%>
+<%@ page import="es.starbooks.conector.*"%>
+<%@ page import="es.starbooks.clase.*"%>
 
-<%@ page import="java.sql.*" %>
-<%@ page import="java.util.*" %>
-<%	
-	String id_libro = request.getParameter("id");
+<%@ page import="java.sql.*"%>
+<%@ page import="java.util.*"%>
+<%
 	ArrayList<Pedido> pedidos = new ArrayList<Pedido>();
+	ArrayList<Libro> libros = new ArrayList<Libro>();
 	PedidoModelo pedidoModelo = new PedidoModelo();
-	pedidoModelo.seleccionarPorId_libro(Integer.parseInt(id_libro));
-	
+	pedidos = pedidoModelo.selectAll();
 %>
 <body>
 
-<div class="container-fluid bg-1 text-center"> 
-<h1>Lista de pedidos</h1>
-<p>
-<img src=Imagenes\starbooks1.jpg class="img-responsive img-circle" style="display: inline" width="120" height="120"> 		
+	<div class="container-fluid bg-1 text-center">
+		<h1>Lista de pedidos</h1>
+		<p>
+			<img src=Imagenes\starbooks1.jpg class="img-responsive img-circle"
+				style="display: inline" width="120" height="120">
 
 		</p>
-		
-		<table class="table ">
-    		<thead>
-      			<tr>
-			        <th>Id_Cliente</th>
-			        <th>Titulo</th>
-			        <th>Autor</th>
-			       	<th>Cantidad</th>
-			    </tr>
-    		</thead>
-    	<%
-    	for(Pedido pedido:pedidos){
-    	%>
-   
-  			<tbody>
-  				<tr>
-        			<td><%=%></td>
-					<td><%=%></td>
-					<td><%=%></td>
-					<td><%=%></td>
-					<td><%=%></td>
-      			</tr>
-      			<%}%>  				
-  			</tbody>
-  		</table>
-  	</div>    
+		<table border="1" class="table">
+			<thead>
+				<tr>
+					<th>Id_Cliente</th>
+					<th>Titulo</th>
+					<th>Autor</th>
+					<th>Cantidad</th>
+				</tr>
+			</thead>
+			<tbody>
+				<%
+					for (Pedido pedido : pedidos) {
+				%>
+				<tr>
+					<td><%=pedido.getId_usuario()%></td>
+					<td><%=pedido.getLibro().getTitulo()%></td>
+					<td><%=pedido.getLibro().getAutor()%></td>
+					<td><%=pedido.getLibro().getCantidad()%></td>
+				</tr>
+				<%
+					}
+				%>				
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>
