@@ -43,7 +43,7 @@
 <form action="Login.jsp"> 
 <div class="container text-center">
 	<input type="text" name="nombre" id="nombre">
-	<input type="text" name="contra" id="contra">
+	<input type="password" name="contra" id="contra">
 	<input type="submit" value="Login">
 	<br>
 	<img src=Imagenes/starbooks1.jpg> 	

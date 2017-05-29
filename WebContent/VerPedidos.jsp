@@ -40,8 +40,6 @@
 <h1>Lista de pedidos</h1>
 <p>
 <img src=Imagenes\starbooks1.jpg class="img-responsive img-circle" style="display: inline" width="120" height="120"> 		
-
-
 		</p>
 		<table border="1" class="table">
 			<thead>
