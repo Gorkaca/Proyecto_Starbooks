@@ -32,6 +32,7 @@
 			<li><a href="VerLibros.jsp">Ver Libros</a></li>
 			<li><a href="AnadirLibro.jsp">Añadir Libro</a></li>
 			<li><a href="VerPedidos.jsp">Ver pedidos</a></li>
+			<li><a href="Login.jsp"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
 			<li>kaixo<%=usuario.getNombre()%></li>
 		</ul>
 	</div>

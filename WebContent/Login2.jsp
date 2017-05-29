@@ -79,9 +79,9 @@
 	</nav>
 <form action="Login.jsp"> 
 <div class="container-fluid bg-3 text-center">
-	<label>nombre de usuario</label>
+	<label>erabiltzailea</label>
 	<input type="text" name="nombre" id="nombre">
-	<label>contraseña</label>
+	<label>pasaitza</label>
 	<input type="password" name="contra" id="contra">
 	<input type="submit" value="Login">
 	<br>
