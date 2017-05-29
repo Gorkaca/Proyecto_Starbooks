@@ -81,6 +81,7 @@
 <div class="container-fluid bg-3 text-center">
 	<label>nombre de usuario</label>
 	<input type="text" name="nombre" id="nombre">
+	<label>contrasena</label>	
 	<input type="password" name="contra" id="contra">
 	<input type="submit" value="Login">
 	<br>

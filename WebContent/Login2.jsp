@@ -78,7 +78,7 @@
 	</div>
 	</nav>
 <form action="Login.jsp"> 
-<div class="container-fluid bg-3 text-center">
+<div class="container-fluid bg-2 text-center">
 	<label>erabiltzailea</label>
 	<input type="text" name="nombre" id="nombre">
 	<label>pasaitza</label>
