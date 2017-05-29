@@ -2,12 +2,12 @@
 	pageEncoding="ISO-8859-1"%>
 	
 <%
-	int session_lenght = session.getValueNames().length;
-	if (session_lenght == 0) {
-		response.sendRedirect("Login.jsp");
-	}
+//	int session_lenght = session.getValueNames().length;
+//	if (session_lenght == 0) {
+//		response.sendRedirect("Login.jsp");
+//	}
 
-	Usuario usuario = (Usuario)session.getAttribute("sesioa");
+//	Usuario usuario = (Usuario)session.getAttribute("sesioa");
 %>
 <%@ page import="java.sql.*"%>
 <%@ page import="java.util.*"%>
@@ -16,18 +16,18 @@
 <%
 	
 
-    usuario = (Usuario)session.getAttribute("sesioa");
-	int id_usuario = usuario.getId_usuario();
+//  usuario = (Usuario)session.getAttribute("sesioa");
+//	int id_usuario = usuario.getId_usuario();
 	
-	String id_libro = request.getParameter("id");
+//	String id_libro = request.getParameter("id");
 	
-	Pedido pedido = new Pedido();
+//	Pedido pedido = new Pedido();
 	
-	pedido.setId_usuario(id_usuario);
-	pedido.setId_libro(Integer.parseInt(id_libro));
+//	pedido.setId_usuario(id_usuario);
+//	pedido.setId_libro(Integer.parseInt(id_libro));
 	
-	PedidoModelo pedidoModelo = new PedidoModelo();
-	pedidoModelo.insertarPedido(Integer.parseInt(id_libro), id_usuario);
+//	PedidoModelo pedidoModelo = new PedidoModelo();
+//	pedidoModelo.insertarPedido(Integer.parseInt(id_libro), id_usuario);
 	
 %>
 
